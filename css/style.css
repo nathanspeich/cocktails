@@ -1,0 +1,162 @@
+/*Global*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  color: #333;
+}
+
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/*Main Header*/
+
+/*Main Nav*/
+.mainNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.mainNav > div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo:link,
+.logo:visited {
+  text-decoration: none;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.logo:hover,
+.lgoo:active {
+  color: #111;
+}
+
+.navMenu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink:link,
+.navLink:visited {
+  text-decoration: none;
+  color: #333;
+  font-size: 2rem;
+}
+
+.navLink:hover,
+.navLink:active {
+  color: #111;
+}
+
+/*Search Input*/
+.searchForm {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+/*Search BTN*/
+.btn {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/*Main Content*/
+
+/*Search Results*/
+.searchResults {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.cocktail {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4rem;
+}
+
+.cocktail:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cocktail img {
+  max-width: 25%;
+}
+
+.cocktailTextBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cocktailName {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.cocktailIngredientsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cocktailIngredientsHeading {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.cocktailIngredients {
+  list-style-position: inside;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.cocktailInstructionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cocktailInstructionsHeading {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.cocktailInstructions {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
