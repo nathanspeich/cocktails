@@ -9,7 +9,7 @@ btn.addEventListener("click", searchCocktailDB);
 //Search Cocktail DB
 function searchCocktailDB(event) {
   //User search input
-  const searchInput = document.querySelector(".searchInput").value;
+  const searchInput = document.querySelector("input").value;
   //Prevent empty searches
   if (searchInput === "") {
     return;
@@ -91,7 +91,7 @@ function addCocktailToDOM(drink) {
   //Create p el
   const cocktailInstructions = document.createElement("p");
   cocktailInstructions.classList.add("cocktailInstructions");
-  cocktailInstructions.innerText = drink.strInstructions;
+  cocktailInstructions.innerText = `${truncate(drink.strInstructions, 200)}`;
   cocktailInstructionsContainer.appendChild(cocktailInstructions);
 
   //Append new cocktail el to searchResults section el
@@ -107,4 +107,9 @@ function addIngredientsToDOM(drink) {
     }
   }
   return li;
+}
+
+//Meta description character limit ellipsis
+function truncate(p, n) {
+  return p.length > n ? p.substr(0, n - 1) + "..." : p;
 }

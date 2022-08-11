@@ -1,3 +1,50 @@
+/*Font Size System
+Major Third https://type-scale.com/
+
+7.451rem
+74.51px
+
+5.96rem
+59.60px
+
+4.768rem
+47.68px
+
+3.815rem
+38.15px
+
+3.052rem
+30.52px
+
+2.441rem
+24.41px
+
+1.953rem
+19.53px
+
+1.563rem
+15.63px
+
+1.25rem
+12.50px
+
+1rem
+10.00px
+
+0.8rem
+8.00px
+
+0.64rem
+6.40px
+
+0.512rem
+5.12px
+
+0.41rem
+4.10px
+
+*/
+
 /*Global*/
 * {
   padding: 0;
@@ -10,84 +57,63 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 2rem;
-  color: #333;
+  font-family: "Source Sans Pro", serif;
+  font-size: 1.563rem;
+  color: #111;
 }
 
-.container {
+.pageContainer {
   max-width: 90rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
-/*Main Header*/
+/*Header*/
 
 /*Main Nav*/
+.mainHeader {
+  border-bottom: 1px solid #dedede;
+}
+
 .mainNav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-}
-
-.mainNav > div {
-  display: flex;
   align-items: center;
-  gap: 2rem;
+  padding: 2rem 0;
 }
 
-.logo:link,
-.logo:visited {
+.logo {
   text-decoration: none;
-  font-size: 4rem;
+  color: inherit;
+  font-size: 3.052rem;
   font-weight: 700;
-  color: #333;
 }
 
-.logo:hover,
-.lgoo:active {
-  color: #111;
+.fi {
+  font-size: 2.441rem;
 }
 
-.navMenu {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.navLink:link,
-.navLink:visited {
-  text-decoration: none;
-  color: #333;
-  font-size: 2rem;
-}
-
-.navLink:hover,
-.navLink:active {
-  color: #111;
-}
-
-/*Search Input*/
 .searchForm {
-  width: 100%;
   display: flex;
-  gap: 1rem;
+  border: 1px solid #dedede;
 }
 
-.searchInput {
-  width: 100%;
-  padding: 0.5rem 1rem;
+.searchForm input {
+  border: none;
+  font-size: 1.563rem;
+  padding: 1rem;
+  outline: none;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-/*Search BTN*/
-.btn {
-  font-family: "Open Sans", sans-serif;
-  color: #333;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
+.searchForm .btn {
+  background: #111;
+  border: none;
+  color: #f2f2f2;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.563rem;
+  font-weight: 400;
+  padding: 1rem;
   cursor: pointer;
 }
 
@@ -95,9 +121,10 @@ body {
 
 /*Search Results*/
 .searchResults {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 4rem;
+  margin: 4rem 0;
 }
 
 .cocktail {
@@ -114,7 +141,7 @@ body {
 }
 
 .cocktail img {
-  max-width: 25%;
+  max-width: 40%;
 }
 
 .cocktailTextBox {
@@ -124,7 +151,7 @@ body {
 }
 
 .cocktailName {
-  font-size: 2.4rem;
+  font-size: 2.441rem;
   font-weight: 700;
 }
 
@@ -135,13 +162,13 @@ body {
 }
 
 .cocktailIngredientsHeading {
-  font-size: 1.8rem;
+  font-size: 1.953rem;
   font-weight: 600;
 }
 
 .cocktailIngredients {
   list-style-position: inside;
-  font-size: 1.6rem;
+  font-size: 1.563rem;
   line-height: 1.5;
 }
 
@@ -152,11 +179,48 @@ body {
 }
 
 .cocktailInstructionsHeading {
-  font-size: 1.8rem;
+  font-size: 1.953rem;
   font-weight: 600;
 }
 
 .cocktailInstructions {
   font-size: 1.6rem;
   line-height: 1.5;
+}
+
+/*Media query*/
+
+@media (max-width: 700px) {
+  .searchResults {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cocktail {
+    flex-direction: column;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .cocktail img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .searchResults {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .mainNav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .searchForm {
+    width: 100%;
+  }
+  .searchForm input {
+    width: 100%;
+  }
 }

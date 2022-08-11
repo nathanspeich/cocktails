@@ -4,42 +4,37 @@
     <meta charset="utf-8" />
     <meta name="description" content="This is where your description goes" />
     <meta name="keywords" content="one, two, three" />
-    <title>Title in the tab</title>
+    <title>Cocktails</title>
 
     <!-- external CSS link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="mainHeader">
-      <div class="container">
+    <div class="pageContainer">
+      <header class="mainHeader">
         <nav class="mainNav">
-          <a href="index.html" class="logo">Cocktail DB Search</a>
-          <form action="" class="searchForm">
-            <input
-              class="searchInput"
-              type="text"
-              name=""
-              value=""
-              placeholder="Search Cocktail DB"
-            />
-            <button class="btn" type="button" name="button">Search</button>
+          <a href="index.html" class="logo">Cocktails</a>
+          <form class="searchForm">
+            <input type="text" placeholder="Search books by title" />
+            <button type="submit" class="btn">Search</button>
           </form>
         </nav>
-      </div>
-    </header>
-    <main class="mainContent">
-      <div class="container">
+      </header>
+      <main class="mainContent">
         <section class="searchResults"></section>
-      </div>
-    </main>
-
+      </main>
+    </div>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
