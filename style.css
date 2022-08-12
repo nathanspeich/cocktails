@@ -1,0 +1,234 @@
+/*Font Size System
+Major Third https://type-scale.com/
+
+7.451rem
+74.51px
+
+5.96rem
+59.60px
+
+4.768rem
+47.68px
+
+3.815rem
+38.15px
+
+3.052rem
+30.52px
+
+2.441rem
+24.41px
+
+1.953rem
+19.53px
+
+1.563rem
+15.63px
+
+1.25rem
+12.50px
+
+1rem
+10.00px
+
+0.8rem
+8.00px
+
+0.64rem
+6.40px
+
+0.512rem
+5.12px
+
+0.41rem
+4.10px
+
+*/
+
+/*Global*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Source Sans Pro", serif;
+  font-size: 1.563rem;
+  color: #111;
+}
+
+.pageContainer {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+html,
+body {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+}
+
+/*Header*/
+
+/*Main Nav*/
+.mainHeader {
+  border-bottom: 1px solid #dedede;
+}
+
+.mainNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.logo {
+  text-decoration: none;
+  color: inherit;
+  font-size: 3.052rem;
+  font-weight: 700;
+}
+
+.fi {
+  font-size: 2.441rem;
+}
+
+.searchForm {
+  display: flex;
+  border: 1px solid #dedede;
+}
+
+.searchForm input {
+  border: none;
+  font-size: 1.563rem;
+  padding: 1rem;
+  outline: none;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.searchForm .btn {
+  background: #111;
+  border: none;
+  color: #f2f2f2;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.563rem;
+  font-weight: 400;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/*Main Content*/
+
+/*Search Results*/
+.searchResults {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  margin: 4rem 0;
+}
+
+.cocktail {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4rem;
+}
+
+.cocktail:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cocktail img {
+  max-width: 40%;
+}
+
+.cocktailTextBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cocktailName {
+  font-size: 2.441rem;
+  font-weight: 700;
+}
+
+.cocktailIngredientsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cocktailIngredientsHeading {
+  font-size: 1.953rem;
+  font-weight: 600;
+}
+
+.cocktailIngredients {
+  list-style-position: inside;
+  font-size: 1.563rem;
+  line-height: 1.5;
+}
+
+.cocktailInstructionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cocktailInstructionsHeading {
+  font-size: 1.953rem;
+  font-weight: 600;
+}
+
+.cocktailInstructions {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/*Media query*/
+
+@media (max-width: 550px) {
+  .mainNav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .searchForm {
+    width: 100%;
+  }
+  .searchForm input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .searchResults {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cocktail {
+    flex-direction: column;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .cocktail img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .searchResults {
+    grid-template-columns: 1fr;
+  }
+}
