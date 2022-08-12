@@ -198,7 +198,27 @@ body {
 
 /*Media query*/
 
-@media (max-width: 550px) {
+@media all and (max-width: 700px) {
+  .searchResults {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cocktail {
+    flex-direction: column;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .cocktail img {
+    max-width: 100%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .searchResults {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (max-width: 550px) {
   .mainNav {
     flex-direction: column;
     justify-content: center;
@@ -210,25 +230,5 @@ body {
   }
   .searchForm input {
     width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .searchResults {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 700px) {
-  .searchResults {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .cocktail {
-    flex-direction: column;
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-  .cocktail img {
-    max-width: 100%;
   }
 }
